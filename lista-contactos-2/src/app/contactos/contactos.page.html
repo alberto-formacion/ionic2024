@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Contactos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+    <ion-list lines="full" inset="true">
+      @for (user of users; track user.id.value) {
+        <ion-item>
+          <ion-avatar slot="start">
+            <img [alt]="user.name.first" [src]="user.picture.large" />
+          </ion-avatar>
+          <ion-label>{{user.name.first}} {{user.name.last}}</ion-label>
+        </ion-item>
+      }
+    </ion-list>
+</ion-content>

@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Contactos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+    <ion-list lines="full"  inset="true">
+      @for (user of users; track user.login.uuid) {
+        <ion-item-sliding (click)="abrirDetalle(user)">
+          <ion-item button detail>
+
+            <ion-thumbnail slot="start">
+              <img alt="Silhouette of mountains" [src]="user.picture.large" />
+            </ion-thumbnail>
+
+            <ion-label>{{user.name.first}} {{user.name.last}}</ion-label>
+
+          </ion-item>
+
+            <ion-item-options (ionSwipe)="borrarContacto(user)">
+              <ion-item-option (click)="borrarContacto(user)" expandable color="danger">
+                <ion-icon slot="icon-only" name="trash"></ion-icon>
+              </ion-item-option>
+            </ion-item-options>
+
+          
+        </ion-item-sliding>
+      }
+    </ion-list>
+    <ion-modal [isOpen]="isModalOpen">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>{{user.name.first}} {{user.name.last}}</ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="cerrarModal()" [strong]="true">Cerrar</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <div class="cuerpoModal">
+            <div class="imagen">
+              <img [src]="user.picture.large" alt="">
+            </div>
+            <div>
+              <div>{{user.location.street.name}} {{user.location.street.number}}, {{user.location.city}} ({{user.location.country}})</div>
+              <div>{{user.email}}</div>
+              <div>{{user.cell}}</div>
+              <div>{{user.phone}}</div>
+              <div>{{user.dob.date}}</div>
+              
+            </div>
+          </div>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+</ion-content>
