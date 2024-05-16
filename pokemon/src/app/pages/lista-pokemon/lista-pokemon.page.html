@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Pokedex</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list lines="full" inset>
+    @for(pokemon of pokemons; track pokemon.id){
+    <ion-item id="open-modal" button detail (click)="verPokemon(pokemon)">
+      <ion-avatar aria-hidden="true" slot="start">
+        <img [src]="pokemon.sprites.front_default" [alt]="pokemon.name">
+      </ion-avatar>
+      <ion-label>#{{ pokemon.id }} - {{ pokemon.name | titlecase }}</ion-label> 
+    </ion-item>
+  }
+  </ion-list>
+
+  <ion-modal [isOpen]="isModalOpen" (willDismiss)="abrirCerrarModal(false)">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>{{pokemon.name | titlecase}}</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="abrirCerrarModal(false)">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <div class="imagen">
+          <img [src]="pokemon.sprites.front_default" [alt]="pokemon.name">
+          <img [src]="pokemon.sprites.front_shiny" [alt]="pokemon.name">
+        </div>
+        <div class="tipos">
+          @for(type of pokemon.types; track type.type.name){
+            <ion-chip class="{{type.type.name}}">{{type.type.name}}</ion-chip>
+          }
+        </div>
+        <div class="info">
+          <p><ion-icon name="caret-up"></ion-icon> <strong>Height:</strong> {{ (pokemon.height / 10).toFixed(1) }} m</p>
+          <p><ion-icon name="scale"></ion-icon> <strong>Weight:</strong> {{ (pokemon.weight / 10).toFixed(1) }} kg</p>
+        </div>
+        <div>
+          @for(stat of pokemon.stats; track stat.stat.name){
+            <div>{{stat.stat.name | titlecase}} ({{stat.base_stat}})
+              <div style="background-color: #e258fa; border: 1px solid #c800ff; width: calc(100% * {{stat.base_stat}}/257); border-radius:5px; height:12px"></div>
+            </div>
+          }
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadPokemons($event)">
+    <!--ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content-->
+    <div class="infinite-scroll-content">
+      <img src="../../../assets/pikachu-running.gif" alt="">
+    </div>
+  </ion-infinite-scroll>
+</ion-content>
