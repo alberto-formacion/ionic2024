@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonItem, IonCard, IonList, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonLabel, IonThumbnail, IonItemSliding, IonItemOption, IonItemOptions, IonIcon, IonModal, IonButtons, IonButton } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonItem, IonCard, IonList, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonLabel, IonThumbnail, IonItemSliding, IonItemOption, IonItemOptions, IonIcon, IonModal, IonButtons, IonButton, IonSearchbar } from '@ionic/angular/standalone';
 import { HttpClient } from '@angular/common/http';
 import { addIcons } from 'ionicons';
 import { trash } from 'ionicons/icons'
@@ -11,7 +11,7 @@ import { trash } from 'ionicons/icons'
   templateUrl: './contactos.page.html',
   styleUrls: ['./contactos.page.scss'],
   standalone: true,
-  imports: [IonButton, IonButtons, IonModal, IonIcon, IonItemOptions, IonItemOption, IonItemSliding, IonLabel, IonThumbnail, IonCardContent, IonCardSubtitle, IonCardTitle, IonCardHeader, IonList, IonCard, IonItem, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonSearchbar, IonButton, IonButtons, IonModal, IonIcon, IonItemOptions, IonItemOption, IonItemSliding, IonLabel, IonThumbnail, IonCardContent, IonCardSubtitle, IonCardTitle, IonCardHeader, IonList, IonCard, IonItem, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
 export class ContactosPage implements OnInit {
   cerrarModal() {
@@ -26,6 +26,7 @@ export class ContactosPage implements OnInit {
   users: any[] = [];
   user?: any;
   isModalOpen: boolean;
+  filteredUsers: any[] = [];
 
   ngOnInit() {
 
@@ -46,7 +47,21 @@ export class ContactosPage implements OnInit {
     .subscribe((data: any) => {
       console.log(data.results);
       this.users = data.results;
+      this.filteredUsers = this.users;
     });
+  }
+
+  buscarContacto(event: any){
+    const txt = event.target.value;
+
+    if(txt && txt.trim() != ''){
+      this.filteredUsers = this.users.filter((u:any)=>{
+        return (u.name.first.toLowerCase().indexOf(txt.toLowerCase()) > -1 );
+      })
+    }else{
+      this.filteredUsers = this.users;
+    }
+
   }
 }
 

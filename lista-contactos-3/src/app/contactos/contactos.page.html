@@ -5,8 +5,9 @@
 </ion-header>
 
 <ion-content fullscreen="true">
+  <ion-searchbar animated="true" (ionInput)="buscarContacto($event)"></ion-searchbar>
     <ion-list lines="full"  inset="true">
-      @for (user of users; track user.login.uuid) {
+      @for (user of filteredUsers; track user.login.uuid) {
         <ion-item-sliding (click)="abrirDetalle(user)">
           <ion-item button detail>
 

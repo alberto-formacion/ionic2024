@@ -1,0 +1,12 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>segunda-pagina</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-button [routerLink]="['/primera-pagina']">Primera Página</ion-button>
+  @if (id) {
+    <div>Viene con parametro: {{id}}</div>
+  }
+</ion-content>
