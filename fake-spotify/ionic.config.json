@@ -1,0 +1,7 @@
+{
+  "name": "fake-spotify",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
