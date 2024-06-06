@@ -5,37 +5,26 @@ import NativeAudio from '@awesome-cordova-library/nativeaudio';
   providedIn: 'root'
 })
 export class AudioService {
+  private audio = new Audio();
 
   constructor() { }
 
-  preLoadAudio(){
-    NativeAudio.preloadSimple(
-      'song1',
-      '../../assets/audio/El Reno Renardo - 03 - No Hay Huevos.mp3',
-      () => {
-        this.playAudio();
-        console.log('success')
-      },
-      () => console.error('fail'),
-    );
-  }
-
-  playAudio(){
-    NativeAudio.play('song1',
-      ()=>console.log("Estoy sonando"),
-      ()=>console.log("Algo no va bien"),
-      ()=>console.log("completo"));
+  playAudio(trackName: string){
+    this.audio.src=`../../assets/audio/${trackName}`;
+    this.audio.load();
+    this.audio.play();
   }
 
   pauseAudio(){
-
+    this.audio.pause();
   }
 
   stopAudio(){
-
+    this.audio.pause();
+    this.audio.currentTime = 0;
   }
 
   setVolume(volume:number){
-
+    this.audio.volume = volume;
   }
 }

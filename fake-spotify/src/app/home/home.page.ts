@@ -14,7 +14,6 @@ import { search, library, home, addOutline, flashOutline, timeOutline, settingsO
 export class HomePage {
   constructor(private audioService: AudioService) {
     addIcons({search, library, home, addOutline, flashOutline, timeOutline, settingsOutline});
-    //audioService.preLoadAudio();
-    //audioService.playAudio();
+    audioService.playAudio("El Reno Renardo - 01 - Tipica Intro.mp3");
   }
 }

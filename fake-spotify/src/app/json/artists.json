@@ -1,0 +1,38 @@
+[
+  {
+    "name": "The Beatles",
+    "image": "beatles.jpg"
+  },
+  {
+    "name": "Michael Jackson",
+    "image": "michael_jackson.jpg"
+  },
+  {
+    "name": "Pink Floyd",
+    "image": "pink_floyd.jpg"
+  },
+  {
+    "name": "AC/DC",
+    "image": "acdc.jpg"
+  },
+  {
+    "name": "Fleetwood Mac",
+    "image": "fleetwood_mac.jpg"
+  },
+  {
+    "name": "Nirvana",
+    "image": "nirvana.jpg"
+  },
+  {
+    "name": "Eagles",
+    "image": "eagles.jpg"
+  },
+  {
+    "name": "Led Zeppelin",
+    "image": "led_zeppelin.jpg"
+  },
+  {
+    "name": "El Reno Renardo",
+    "image": ""
+  }
+]
