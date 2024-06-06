@@ -28,6 +28,7 @@
     </ion-list>
   </ion-content>
 </ion-menu>
+
 <div class="ion-page" id="main-content">
   <ion-header class="ion-no-border">
     <ion-toolbar>
@@ -39,9 +40,24 @@
       <ion-chip [outline]="true">Podcasts</ion-chip>
     </ion-toolbar>
   </ion-header>
+
   <ion-content class="ion-padding">
-    Tap the button in the toolbar to open the menu.
+    <ion-card>
+      <ion-card-content>
+        <ion-list lines="none">
+          @for(album of recientAlbums; track album.name){
+            <ion-item button="true">
+              <ion-thumbnail slot="start">
+                <img [alt]="album.name" [src]="album.cover" />
+              </ion-thumbnail>
+              <ion-label>{{album.name}}</ion-label>
+            </ion-item>
+          }
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
   </ion-content>
+
   <ion-tabs>
     <ion-tab-bar [translucent]="true" slot="bottom">
       <ion-tab-button tab="home">

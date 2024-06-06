@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Abbey Road",
+    "trackList": [
+      { "name": "Come Together", "file": "/assets/audio/El Reno Renardo - 01 - Tipica Intro.mp3" },
+      { "name": "Something", "file": "/assets/audio/El Reno Renardo - 02 - Game Over.mp3" },
+      { "name": "Here Comes The Sun", "file": "/assets/audio/El Reno Renardo - 03 - No Hay Huevos.mp3" }
+    ],
+    "cover": "/assets/img/Beatles_-_Abbey_Road.jpg",
+    "artist": { "name": "The Beatles", "image": "/assets/img/Beatles_-_Abbey_Road.jpg" }
+  },
+  {
+    "name": "Thriller",
+    "trackList": [
+      { "name": "Thriller", "file": "../../assets/audio/El Reno Renardo - 01 - Tipica Intro.mp3" },
+      { "name": "Beat It", "file": "../../assets/audio/El Reno Renardo - 02 - Game Over.mp3" },
+      { "name": "Billie Jean", "file": "../../assets/audio/El Reno Renardo - 03 - No Hay Huevos.mp3" }
+    ],
+    "cover": "../../assets/img/Michael_Jackson_-_Thriller.png",
+    "artist": { "name": "Michael Jackson", "image": "../../assets/img/Michael_Jackson_-_Thriller.png" }
+  },
+  {
+    "name": "The Dark Side of the Moon",
+    "trackList": [
+      { "name": "Speak to Me", "file": "../../assets/audio/El Reno Renardo - 01 - Tipica Intro.mp3" },
+      { "name": "Breathe", "file": "../../assets/audio/El Reno Renardo - 02 - Game Over.mp3" },
+      { "name": "Time", "file": "../../assets/audio/El Reno Renardo - 03 - No Hay Huevos.mp3" }
+    ],
+    "cover": "../../assets/img/610RGJlG1ZL._AC_UF894,1000_QL80_.jpg",
+    "artist": { "name": "Pink Floyd", "image": "../../assets/img/610RGJlG1ZL._AC_UF894,1000_QL80_.jpg" }
+  },
+  {
+    "name": "Back in Black",
+    "trackList": [
+      { "name": "Hells Bells", "file": "../../assets/audio/El Reno Renardo - 01 - Tipica Intro.mp3" },
+      { "name": "Shoot to Thrill", "file": "../../assets/audio/El Reno Renardo - 02 - Game Over.mp3" },
+      { "name": "Back in Black", "file": "../../assets/audio/El Reno Renardo - 03 - No Hay Huevos.mp3" }
+    ],
+    "cover": "../../assets/img/ACDC_Back_in_Black_cover.svg.png",
+    "artist": { "name": "AC/DC", "image": "../../assets/img/ACDC_Back_in_Black_cover.svg.png" }
+  },
+  {
+    "name": "Rumours",
+    "trackList": [
+      { "name": "Dreams", "file": "../../assets/audio/El Reno Renardo - 01 - Tipica Intro.mp3" },
+      { "name": "Go Your Own Way", "file": "../../assets/audio/El Reno Renardo - 02 - Game Over.mp3" },
+      { "name": "The Chain", "file": "../../assets/audio/El Reno Renardo - 03 - No Hay Huevos.mp3" }
+    ],
+    "cover": "../../assets/img/rumours.jpg",
+    "artist": { "name": "Fleetwood Mac", "image": "../../assets/img/rumours.jpg" }
+  },
+  {
+    "name": "Nevermind",
+    "trackList": [
+      { "name": "Smells Like Teen Spirit", "file": "../../assets/audio/El Reno Renardo - 01 - Tipica Intro.mp3" },
+      { "name": "Come as You Are", "file": "../../assets/audio/El Reno Renardo - 02 - Game Over.mp3" },
+      { "name": "Lithium", "file": "../../assets/audio/El Reno Renardo - 03 - No Hay Huevos.mp3" }
+    ],
+    "cover": "../../assets/img/nevermind.jpg",
+    "artist": { "name": "Nirvana", "image": "../../assets/img/nevermind.jpg" }
+  },
+  {
+    "name": "The Wall",
+    "trackList": [
+      { "name": "Another Brick in the Wall, Pt. 2", "file": "../../assets/audio/El Reno Renardo - 01 - Tipica Intro.mp3" },
+      { "name": "Comfortably Numb", "file": "../../assets/audio/El Reno Renardo - 02 - Game Over.mp3" },
+      { "name": "Hey You", "file": "../../assets/audio/El Reno Renardo - 03 - No Hay Huevos.mp3" }
+    ],
+    "cover": "../../assets/img/the_wall.jpg",
+    "artist": { "name": "Pink Floyd", "image": "../../assets/img/the_wall.jpg" }
+  },
+  {
+    "name": "Hotel California",
+    "trackList": [
+      { "name": "Hotel California", "file": "../../assets/audio/El Reno Renardo - 01 - Tipica Intro.mp3" },
+      { "name": "New Kid in Town", "file": "../../assets/audio/El Reno Renardo - 02 - Game Over.mp3" },
+      { "name": "Life in the Fast Lane", "file": "../../assets/audio/El Reno Renardo - 03 - No Hay Huevos.mp3" }
+    ],
+    "cover": "../../assets/img/hotel.jpg",
+    "artist": { "name": "Eagles", "image": "../../assets/img/hotel.jpg" }
+  },
+  {
+    "name": "Led Zeppelin IV",
+    "trackList": [
+      { "name": "Black Dog", "file": "../../assets/audio/El Reno Renardo - 01 - Tipica Intro.mp3" },
+      { "name": "Rock and Roll", "file": "../../assets/audio/El Reno Renardo - 02 - Game Over.mp3" },
+      { "name": "Stairway to Heaven", "file": "../../assets/audio/El Reno Renardo - 03 - No Hay Huevos.mp3" }
+    ],
+    "cover": "../../assets/img/Led Zeppelin IV.jpg",
+    "artist": { "name": "Led Zeppelin", "image": "../../assets/img/Led Zeppelin IV.jpg" }
+  },
+  {
+    "name": "Sgt. Pepper's Lonely Hearts Club Band",
+    "trackList": [
+      { "name": "Sgt. Pepper's Lonely Hearts Club Band", "file": "../../assets/audio/El Reno Renardo - 01 - Tipica Intro.mp3" },
+      { "name": "With a Little Help from My Friends", "file": "../../assets/audio/El Reno Renardo - 02 - Game Over.mp3" },
+      { "name": "Lucy in the Sky with Diamonds", "file": "../../assets/audio/El Reno Renardo - 03 - No Hay Huevos.mp3" }
+    ],
+    "cover": "../../assets/img/Sgt. Pepper's Lonely Hearts Club Band.jpg",
+    "artist": { "name": "The Beatles", "image": "../../assets/img/Sgt. Pepper's Lonely Hearts Club Band.jpg" }
+  },
+  {
+    "name": "Babuinos del Metal",
+    "trackList": [
+      { "name": "Tipica Intro", "file": "../../assets/audio/El Reno Renardo - 01 - Tipica Intro.mp3" },
+      { "name": "Game Over", "file": "../../assets/audio/El Reno Renardo - 02 - Game Over.mp3" },
+      { "name": "No Hay Huevos", "file": "../../assets/audio/El Reno Renardo - 03 - No Hay Huevos.mp3" }
+    ],
+    "cover": "../../assets/img/Cover_Babuinos.jpg",
+    "artist": { "name": "The Beatles", "image": "beatles.jpg" }
+  }
+]
